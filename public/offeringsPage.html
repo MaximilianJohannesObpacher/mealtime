@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="mealtime" ng_controller="OfferingResultsCtrl as resCon">
+
+<ul>
+    <li ng-repeat="offering in resCon.offerings">
+        {{ offering.meal }} {{ offering.chef }} {{ offering.price }}
+    </li>
+</ul>
+
+<form action="index.html">
+    <button>Back Home</button>
+</form>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="offerings.page.controler.js"></script>
+
+</body>
+</html>

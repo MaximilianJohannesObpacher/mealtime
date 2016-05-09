@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="mealtime" ng_controller="CreateOfferingCtrl as createOff">
+
+<input type="text" ng-model="createOff.meal"/>
+<input type="text" ng-model="createOff.chef"/>
+<input type="number" ng-model="createOff.price"/>
+
+<form action="offeringsPage.html">
+    <button ng-click="createOff.saveOffering(createOff.meal, createOff.chef, createOff.price)">
+        Save Offering
+    </button>
+</form>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="create.offering.controller.js"></script>
+</body>
+</html>

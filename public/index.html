@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="mealtime" ng_controller="AppCtrl as app">
+
+<input type="number" ng-model="app.postalCode"/>
+<button ng-click="app.searchOfferings(app.postalCode)">
+    Search Offerings
+</button>
+
+<form action="createOffering.html">
+    <button>Create Offering</button>
+</form>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
