@@ -3,20 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
 </head>
-<body ng-app="mealtime" ng_controller="CreateOfferingCtrl as createOff">
+<body ng-app="mealtime" ng_controller="CreateOfferingCtrl as createOff" background="../O14A0436.jpg"
+      style="overflow:hidden; background-size: cover">
 
-<input type="text" ng-model="createOff.meal"/>
-<input type="text" ng-model="createOff.chef"/>
-<input type="number" ng-model="createOff.price"/>
+<script>
+    $(function(){
+        $("#header").load("header.html");
+    });
+</script>
 
-<form action="offeringsPage.html">
-    <button ng-click="createOff.saveOffering(createOff.meal, createOff.chef, createOff.price)">
-        Save Offering
-    </button>
-</form>
+<div id="header"></div>
 
+
+<div class="row" style="margin-top: 15%">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <div class="row" style="margin-top: 1%">
+            <input type="text" ng-model="createOff.meal" placeholder="What meal do you want to offer?"/>
+        </div>
+        <div class="row" style="margin-top: 1%; height: auto ">
+            <textarea ng-model="createOff.chef" placeholder="Description" rows = 5 style="width: 100%; height: 100%"></textarea>
+        </div>
+        <div class="row" style="margin-top: 1%">
+            <input type="number" ng-model="createOff.price" placeholder="How much is it?"/>
+        </div>
+        <div class="row" style="margin-top: 1%">
+
+        </div>
+        <div class="row" style="margin-top: 1%">
+            <form action="offeringsPage.html" style="width: 100%; height: 30px">
+                <button ng-click="createOff.saveOffering(createOff.meal, createOff.chef, createOff.price)"
+                        style="width: 100%; height: 100%">
+                    Save Offering
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-4"></div>
+</div>
+
+
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script src="../bower_components/angular/angular.js"></script>
 <script src="../controllers/create.offering.controller.js"></script>
 </body>
 </html>
+
+
+<style>
+    div .row {
+        height: 30px;
+        width: 100%;
+    }
+
+    input {
+        height: 100%;
+        width: 100%;
+    }
+</style>
