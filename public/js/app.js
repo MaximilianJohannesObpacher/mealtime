@@ -3,7 +3,7 @@
  */
 var mealtime = angular.module("mealtime", []);
 
-mealtime.controller("AppCtrl", function ($http) {
+mealtime.controller("HomeCtrl", function ($http) {
     var app = this;
     var url = "http://localhost:3000";
 

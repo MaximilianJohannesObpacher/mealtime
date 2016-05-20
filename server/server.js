@@ -5,37 +5,23 @@ var express = require("express");
 var app = express();
 var cors = require("cors");
 var bodyParser = require("body-parser");
+var mongoose = require("mongoose");
+
+var db = require('../config/db.js');
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
 
-var mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost/offerings');
+// routes
+require('../routes.js')(app); // configure our routes
+
+mongoose.connect(db.url);
 
 
-// Creating offering model
-var Offering = mongoose.model('Offering', {meal: String, chef: String, price: Number});
-
-// Add offering to database
-app.get("/", function (req, res) {
-    Offering.find(function (err, offerings) {
-        res.send(offerings);
-    })
-});
 
 app.listen(3000);
 
-// Catching Post Request for new Listing
-app.post("/add", function (req, res){
-    var meal = req.body.meal;
-    var chef = req.body.chef;
-    var price = req.body.price;
-    var offering = new Offering({meal:meal, chef:chef, price:price});
-
-    offering.save(function (err) {
-
-        //Sending to app.js
-        res.send();
-    });
-
-});
+    exports = module.exports = app;
