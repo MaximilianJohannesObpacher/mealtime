@@ -7,9 +7,11 @@ var Meal = require('./models/meal');
 
 module.exports = function(app) {
 
-    // server routes ===========================================================
-    // handle things like api calls
-    // authentication routes
+    // server routes
+    app.get('*', function(req, res) {
+        res.sendfile('./public/views/index.html'); // load our public/index.html file
+    });
+
 
     // sample api route
     app.get('/api/meals', function(req, res) {
@@ -46,8 +48,5 @@ module.exports = function(app) {
         });
         });
     
-    app.get('*', function(req, res) {
-        res.sendfile('./public/views/index.html'); // load our public/index.html file
-    });
 
 };

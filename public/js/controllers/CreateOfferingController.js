@@ -2,9 +2,9 @@
  * Created by MaximilianObpacher on 09.05.16.
  */
 
-var mealtime = angular.module("mealtime", []);
+var mealtime = angular.module("CreateOfferingController", []);
 
-mealtime.controller("CreateOfferingCtrl", function ($http) {
+mealtime.controller("CreateOfferingController", function ($http) {
     var app = this;  
     var url = "http://localhost:3000";
 

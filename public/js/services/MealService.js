@@ -3,7 +3,7 @@
  */
 // public/js/services/NerdService.js
 // 
-angular.module('OfferingService', []).factory('Meal', ['$http', function($http) {
+angular.module('MealService', []).factory('Meal', ['$http', function($http) {
 
     return {
         // call to get all nerds
@@ -11,8 +11,6 @@ angular.module('OfferingService', []).factory('Meal', ['$http', function($http) 
             return $http.get('/api/meals');
         },
 
-
-        // these will work when more API routes are defined on the Node side of things
         // call to POST and create a new Meal
         create : function(mealData) {
             return $http.post('/api/meals', mealData);

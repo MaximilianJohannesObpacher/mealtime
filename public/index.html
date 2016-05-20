@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/Mealtime/public/">
+
+    <title>Mealtime</title>
+
+    <!-- JQuery -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- Angular -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/HomeController.js"></script>
+    <script src="js/controllers/CreateOfferingController.js"></script>
+    <script src="js/controllers/OfferingsListController.js"></script>
+    <script src="js/services/MealService.js"></script>
+
+    <!-- Angular stuff -->
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body ng-app="mealtime" background="templates/media/food-715542_1920.jpg" style="overflow:hidden; background-size: cover">
+
+<img src="templates/media/mealtime_logo.png" style="width: 7%; height: 7%; margin-left: 2%; margin-top: 2%">
+
+<div style="position:absolute; top:3%; right: 3% ">
+    <a style="color: #376e37; font-size: x-large">Login</a>
+    <a style="color: #376e37; font-size: x-large">Register</a>
+</div>
+
+
+<div ng-view></div>
+
+</body>
+</html>

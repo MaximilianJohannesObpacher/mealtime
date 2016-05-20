@@ -8,16 +8,19 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
     // home page
         .when('/', {
-            templateUrl: 'public/templates/index.html',
+            templateUrl: 'templates/home.html',
             controller: 'HomeController'
         })
 
         // meals page that will use the NerdController
         .when('/createOffering', {
-            templateUrl: 'public/templates/index.html',
-            controller: 'CreateOfferingCtrl'
+            templateUrl: 'templates/createOffering.html',
+            controller: 'CreateOfferingController'
+        })
+        .when('/offeringsPage', {
+            templateUrl: 'templates/offeringsPage.html',
+            controller: 'OfferingResultsController'
         });
 
     $locationProvider.html5Mode(true);
-
 }]);

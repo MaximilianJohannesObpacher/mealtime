@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-</head>
-<body ng-app="mealtime" ng_controller="CreateOfferingCtrl as createOff" background="../media/O14A0436.jpg"
-      style="overflow:hidden; background-size: cover">
-
-<script>
-    $(function(){
-        $("#header").load("header.html");
-    });
-</script>
-
-<div id="header"></div>
-
+<div ng_controller="CreateOfferingController as createOff">
 
 <div class="row" style="margin-top: 15%">
     <div class="col-sm-4"></div>
@@ -44,15 +27,6 @@
     <div class="col-sm-4"></div>
 </div>
 
-
-<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-<script src="../../bower_components/angular/angular.js"></script>
-<script src="../js/controllers/CreateOfferingController.js"></script>
-</body>
-</html>
-
-
 <style>
     div .row {
         height: 30px;
@@ -64,3 +38,4 @@
         width: 100%;
     }
 </style>
+</div>

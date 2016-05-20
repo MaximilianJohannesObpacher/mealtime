@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body ng-app="mealtime" ng_controller="OfferingResultsController as resCon">
+<div ng_controller="OfferingResultsController as resCon">
 
 <ul>
     <li ng-repeat="offering in resCon.offerings">
@@ -12,13 +6,9 @@
     </li>
 </ul>
 
-<form action="index.html">
+<form action="../index.html">
     <button>Back Home</button>
 </form>
 
-<script src="../../bower_components/angular/angular.js"></script>
-<script src="../js/controllers/OfferingsListController.js"></script>
-
-</body>
-</html>
+</div>
 
