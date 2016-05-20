@@ -7,7 +7,7 @@ var cors = require("cors");
 var bodyParser = require("body-parser");
 
 app.use(cors());
-app.use(bodyParser());
+app.use(bodyParser.json());
 
 var mongoose = require("mongoose");
 mongoose.connect('mongodb://localhost/offerings');
