@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <base href="/Mealtime/public/">
+    <base href="/">
 
     <title>Mealtime</title>
 
@@ -10,12 +10,12 @@
     <script src="node_modules/jquery/dist/jquery.js"></script>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
     <!-- Angular -->
-    <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
 
     <!-- Controllers -->
     <script src="js/controllers/HomeController.js"></script>
@@ -28,9 +28,10 @@
     <script src="js/app.js"></script>
 
 </head>
-<body ng-app="mealtime" background="templates/media/food-715542_1920.jpg" style="overflow:hidden; background-size: cover">
+<body ng-app="mealtime" background="views/media/food-715542_1920.jpg"
+      style="overflow:hidden; background-size: cover">
 
-<img src="templates/media/mealtime_logo.png" style="width: 7%; height: 7%; margin-left: 2%; margin-top: 2%">
+<img src="views/media/mealtime_logo.png" style="width: 7%; height: 7%; margin-left: 2%; margin-top: 2%">
 
 <div style="position:absolute; top:3%; right: 3% ">
     <a style="color: #376e37; font-size: x-large">Login</a>

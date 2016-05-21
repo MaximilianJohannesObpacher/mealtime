@@ -6,7 +6,6 @@ var mealtime = angular.module("CreateOfferingController", []);
 
 mealtime.controller("CreateOfferingController", function ($http) {
     var app = this;  
-    var url = "http://localhost:3000";
 
     // Catching post request
     app.saveOffering = function (meal, chef, price) {

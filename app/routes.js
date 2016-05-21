@@ -2,17 +2,17 @@
  * Created by MaximilianObpacher on 20.05.16.
  */
 
-// grab the meal model we just created
-var Meal = require('./models/meal');
+var path = require('path');
 
 module.exports = function(app) {
 
     // server routes
     app.get('*', function(req, res) {
-        res.sendfile('./public/views/index.html'); // load our public/index.html file
+        res.sendfile('./public/index.html'); // load our public/index.html file
     });
 
 
+    /** 
     // sample api route
     app.get('/api/meals', function(req, res) {
         // use mongoose to get all meals in the database
@@ -28,7 +28,8 @@ module.exports = function(app) {
     });
 
 
-    // route to handle all angular requests
+
+     * // route to handle all angular requests
     app.get("/", function (req, res) {
         Meal.find(function (err, meals) {
             res.send(meals);
@@ -46,7 +47,7 @@ module.exports = function(app) {
             //Sending to app.js
             res.send();
         });
-        });
+        }); **/
     
 
 };

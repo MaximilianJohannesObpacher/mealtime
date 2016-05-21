@@ -6,8 +6,7 @@ var mealtime = angular.module("OfferingsResultsController", []);
 
 mealtime.controller("OfferingResultsController", function ($http) {
     var app = this;
-    var url = "http://localhost:3000";
-    
+
     loadProducts();
     
     // Setting up offerings list

@@ -5,8 +5,11 @@
 // 
 angular.module('MealService', []).factory('Meal', ['$http', function($http) {
 
-    return {
-        // call to get all nerds
+
+        /**
+         *
+         * return {
+        // call to get all meals
         get : function() {
             return $http.get('/api/meals');
         },
@@ -20,6 +23,6 @@ angular.module('MealService', []).factory('Meal', ['$http', function($http) {
         delete : function(id) {
             return $http.delete('/api/meals/' + id);
         }
-    }
+    }**/
 
 }]);

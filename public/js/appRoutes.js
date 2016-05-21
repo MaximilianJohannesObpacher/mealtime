@@ -8,17 +8,18 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
     // home page
         .when('/', {
-            templateUrl: 'templates/home.html',
+            templateUrl: 'views/home.html',
             controller: 'HomeController'
         })
 
         // meals page that will use the NerdController
         .when('/createOffering', {
-            templateUrl: 'templates/createOffering.html',
+            templateUrl: 'views/createOffering.html',
             controller: 'CreateOfferingController'
         })
+
         .when('/offeringsPage', {
-            templateUrl: 'templates/offeringsPage.html',
+            templateUrl: 'views/offeringsPage.html',
             controller: 'OfferingResultsController'
         });
 
