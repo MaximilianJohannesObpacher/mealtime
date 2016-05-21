@@ -6,6 +6,7 @@ var app = express();
 var cors = require("cors");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var Meal = require("./app/models/meal")
 
 var db = require('./config/db.js');
 
@@ -15,10 +16,12 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
+
+
+mongoose.connect('mongodb://localhost/mealtime');
+
 // routes
 require('./app/routes.js')(app); // configure our routes
-
-mongoose.connect(db.url);
 
 app.listen(3000);
 

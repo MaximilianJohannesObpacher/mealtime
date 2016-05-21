@@ -5,11 +5,12 @@
 var mealtime = angular.module("CreateOfferingController", []);
 
 mealtime.controller("CreateOfferingController", function ($http) {
-    var app = this;  
+    var app = this;
+    var url = window.location.href;
 
     // Catching post request
     app.saveOffering = function (meal, chef, price) {
-        $http.post(url + "/add", {meal: meal, chef: chef, price: price}).success(function () {
+        $http.post("http://localhost:3000/api/meals", {meal: meal, chef: chef, price: price}).success(function () {
             loadProducts();
         })
     };

@@ -11,7 +11,7 @@ mealtime.controller("OfferingResultsController", function ($http) {
     
     // Setting up offerings list
     function loadProducts() {
-        $http.get("http://localhost:3000").success(function (offerings) {
+        $http.get("http://localhost:3000/api/meals").success(function (offerings) {
             app.offerings = offerings;
         });
     }

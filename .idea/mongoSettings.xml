@@ -7,7 +7,7 @@
           <option name="label" value="mealtime" />
           <option name="serverUrls">
             <list>
-              <option value="localhost:3000" />
+              <option value="localhost:27017" />
             </list>
           </option>
           <option name="userDatabase" value="mealtime" />

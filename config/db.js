@@ -4,5 +4,5 @@
 
 // config/db.js
 module.exports = {
-    url : 'mongodb://localhost/offerings'
-}
+    url : 'mongodb://localhost/mealtime'
+};
