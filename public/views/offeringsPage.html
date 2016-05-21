@@ -1,14 +1,16 @@
 <div ng_controller="OfferingResultsController as resCon">
 
-<ul>
-    <li ng-repeat="offering in resCon.offerings">
-        {{ offering.meal }} {{ offering.chef }} {{ offering.price }}
-    </li>
-</ul>
+    <ul>
+        <li ng-repeat="offering in resCon.offerings">
+            {{ offering.meal }} {{ offering.chef }} {{ offering.price }}
+        </li>
+    </ul>
 
-<form action="../index.html">
-    <button>Back Home</button>
-</form>
+    <nav>
+        <form action="/">
+            <button>Back Home</button>
+        </form>
+    </nav>
 
 </div>
 
